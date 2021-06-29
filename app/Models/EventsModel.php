@@ -18,12 +18,8 @@ class EventsModel extends Model
   public function saveData($data)
   {
 
-    $result =  $this->dataTable->insert($data);
-    if ($result->connID->affected_rows >= 1) {
-      return true;
-    } else {
-      return false;
-    }
+    return  $this->dataTable->insert($data);
+   
   }
   
 

@@ -11,6 +11,11 @@ Options All -Indexes
 	Options +FollowSymlinks
 	RewriteEngine On
 
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php/$1 [L]
+
 	# If you installed CodeIgniter in a subfolder, you will need to
 	# change the following line to match the subfolder you need.
 	# http://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
@@ -42,6 +47,8 @@ Options All -Indexes
     # can be sent to index.php, and everything works as normal.
     ErrorDocument 404 index.php
 </IfModule>
+
+
 
 # Disable server signature start
     ServerSignature Off

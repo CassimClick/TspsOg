@@ -18,12 +18,8 @@ class RegisterModel extends Model
 
   public function createUser($data)
   {
-    $result =  $this->dataTable->insert($data);
-    if ($result->connID->affected_rows >= 1) {
-      return true;
-    } else {
-      return false;
-    }
+   return  $this->dataTable->insert($data);
+   
   }
 
   public function verifyUniqueId($id)

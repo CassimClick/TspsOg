@@ -10,6 +10,7 @@
                         Preparatory, Primary and Secondary levels. TSPS has a unique regional syllabi to suit scholars
                         from East African member states. TSPS works hand in gloves with the Tanzanian government to
                         rekindle the used to be dwindling education standards.</p>
+                        <a href="<?=base_url()?>/aboutUs" class="btn btn-default btn-sm">Read More</a>
                 </article>
 
 

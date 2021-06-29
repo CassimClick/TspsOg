@@ -127,7 +127,7 @@
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
                         <nav id="menuzord-right" class="menuzord default">
-                            <a class="menuzord-brand pull-left flip" href="javascript:void(0)">
+                            <a class="menuzord-brand pull-left flip" href="<?=base_url()?>">
                                 <img src="images/logo.png" alt="">
                             </a>
                             <ul class="menuzord-menu">
@@ -137,7 +137,7 @@
                                 <li><a href=#>About TSPS</a>
                                     <ul class="dropdown">
                                         <li><a href="<?=base_url()?>/aboutUs">About us</a></li>
-                                        <li><a href="<?=base_url()?>/achievements">Achievements</a></li>
+                                        <!-- <li><a href="<?=base_url()?>/achievements">Achievements</a></li> -->
                                         <li><a href="<?=base_url()?>/selfReliance">Self Reliance</a></li>
                                         <!-- <li><a href="<?=base_url()?>/nurturing">Nurturing</a></li> -->
 
