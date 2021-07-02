@@ -41,6 +41,8 @@ class Auth extends BaseController
         $data['page'] = [
             'title' => 'Login',
         ];
+
+        $data['adminExists'] = $this->loginModel->checkAdmin();
         if ($this->request->getMethod() == 'post') {
             $rules = [
 

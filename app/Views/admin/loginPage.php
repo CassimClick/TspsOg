@@ -73,10 +73,14 @@ $pageSession = \CodeIgniter\Config\Services::session();
                             <span class="text-danger"><?=displayError($validation, 'password')?></span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                        <?php if(count($adminExists)>0): ?>
 
+                        <?php else: ?>
                         <div class="sign-up">
                             Don't have an account? <a href="<?=base_url()?>/register">Create One</a>
                         </div>
+                        <?php endif; ?>
+
                     </form>
                 </div>
             </div>

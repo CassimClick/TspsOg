@@ -6,6 +6,7 @@ use App\Models\Downloads;
 use App\Models\FeedBack;
 use App\Models\JoiningInstruction;
 use App\Models\Results;
+use App\Models\EventsModel;
 
 class Admin extends BaseController
 {
@@ -24,6 +25,7 @@ class Admin extends BaseController
         $this->feedbackModel = new FeedBack();
         $this->Downloads = new Downloads();
         $this->results = new Results();
+        $this->eventModel = new EventsModel();
 
         $this->session = session();
 
@@ -36,6 +38,14 @@ class Admin extends BaseController
     if(!$this->session->has('loggedUser')){
      return redirect()->route('login');
         }
+
+        $data['announcements'] = count($this->announcementModel->getAllAnnouncements());
+        $data['events'] = count($this->eventModel->getAllEvents());
+        $data['feedbacks'] = count($this->feedbackModel->getFeedback());
+        $data['results'] = count($this->results->getFiles());
+        $data['joining'] = count($this->joiningInstruction->getFiles());
+        $data['uploads'] = count($this->Downloads->getFiles());
+        
         $data['page'] = [
             'title' => 'Admin Dashboard',
             'heading' => 'Admin Dashboard',

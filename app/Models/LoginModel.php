@@ -26,4 +26,8 @@ class LoginModel extends Model
             return $result->getRowArray();
         }
     }
+
+    public function checkAdmin(){
+        return $this->dataTable->select()->get()->getResult();  
+    }
 }
