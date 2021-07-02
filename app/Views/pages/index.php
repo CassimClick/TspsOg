@@ -5,7 +5,8 @@
 <?=$this->include('components/whyChooseUs') ?>
 <?=$this->include('components/announcement') ?>
 <?=$this->include('components/eventsModule') ?>
-<?php //$this->include('components/team')   ?>
+<?php echo $this->include('components/team')   ?>
+
 
 <?=$this->include('components/gallery') ?>
 <?=$this->include('components/feedback') ?>

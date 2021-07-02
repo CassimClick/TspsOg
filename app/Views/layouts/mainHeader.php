@@ -93,7 +93,7 @@
 
 
                         <div class="dropdown-divider"></div>
-                        <a href="admin/logout" class="dropdown-item">
+                        <a href="<?=base_url()?>/logout" class="dropdown-item">
                             <i class="far fa-power-off mr-2  "></i>Log Out
                         </a>
 

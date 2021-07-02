@@ -2,16 +2,7 @@
 $pageSession = \CodeIgniter\Config\Services::session();
 ?>
 
-<?php if ($pageSession->getFlashdata('Success')) : ?>
-<div id="message" class="alert alert-success text-center" role="alert">
-    <?= $pageSession->getFlashdata('Success'); ?>
-</div>
-<?php endif; ?>
-<?php if ($pageSession->getFlashdata('error')) : ?>
-<div id="message" class="alert alert-danger text-center" role="alert">
-    <?= $pageSession->getFlashdata('error'); ?>
-</div>
-<?php endif; ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,30 +44,38 @@ $pageSession = \CodeIgniter\Config\Services::session();
             <div class="card-body">
 
                 <div class="card-text">
-                    <!--
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-                    <form>
-                        <!-- to error: add class "has-danger" -->
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Username</label>
-                            <input type="email" class="form-control form-control-sm" name="email"
-                                aria-describedby="emailHelp">
-                        </div>
 
+                    <?php if ($pageSession->getFlashdata('Success')): ?>
+                    <div id="message" class="alert alert-success text-center" role="alert">
+                        <?=$pageSession->getFlashdata('Success');?>
+                    </div>
+                    <?php endif;?>
+                    <?php if ($pageSession->getFlashdata('error')): ?>
+                    <div id="message" class="alert alert-danger text-center" role="alert">
+                        <?=$pageSession->getFlashdata('error');?>
+                    </div>
+                    <?php endif;?>
+
+
+
+                    <form action="<?=base_url()?>/login" method="post">
+                        <!-- to error: add class "has-danger" -->
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control form-control-sm" name="email"
-                                aria-describedby="emailHelp">
+                                value="<?=set_value('email')?>">
+                            <span class="text-danger"><?=displayError($validation, 'email')?></span>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <!-- <a href="#" style="float:right;font-size:12px;">Forgot password?</a> -->
                             <input type="password" class="form-control form-control-sm" name="password">
+                            <span class="text-danger"><?=displayError($validation, 'password')?></span>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Log in</button>
 
                         <div class="sign-up">
-                            Do you have an account? <a href="<?=base_url()?>/login">Login</a>
+                            Don't have an account? <a href="<?=base_url()?>/register">Create One</a>
                         </div>
                     </form>
                 </div>

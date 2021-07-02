@@ -48,6 +48,11 @@ $myRoutes['nurturing'] = 'Pages::nurturing';
 $myRoutes['examinationResults'] = 'Pages::results';
 
 //=================Admin====================
+$myRoutes['login'] = 'Auth::login';
+$myRoutes['logout'] = 'Auth::logout';
+// $myRoutes['logUser'] = 'Auth::logUser';
+$myRoutes['register'] = 'Auth::register';
+$myRoutes['registerUser'] = 'Auth::registerUser';
 $myRoutes['dashBoard'] = 'Admin::dashBoard';
 $myRoutes['announcements'] = 'Admin::announcements';
 $myRoutes['deleteAnnouncement'] = 'Admin::deleteAnnouncement';
@@ -77,8 +82,6 @@ $myRoutes['updateEvent'] = 'Events::updateEvent';
 
 $myRoutes['results'] = 'Admin::results';
 
-$myRoutes['login'] = 'Auth::login';
-$myRoutes['signUp'] = 'Auth::signUp';
 
 $routes->map($myRoutes);
 

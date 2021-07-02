@@ -15,6 +15,7 @@ class Admin extends BaseController
     public $eventModel;
     public $announcementModel;
     public $feedbackModel;
+    public $session;
 
     public function __construct()
     {
@@ -24,11 +25,17 @@ class Admin extends BaseController
         $this->Downloads = new Downloads();
         $this->results = new Results();
 
+        $this->session = session();
+
         $this->commonTask = new CommonTasks;
         helper(['date', 'form']);
     }
     public function dashBoard()
     {
+
+    if(!$this->session->has('loggedUser')){
+     return redirect()->route('login');
+        }
         $data['page'] = [
             'title' => 'Admin Dashboard',
             'heading' => 'Admin Dashboard',

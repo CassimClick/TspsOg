@@ -23,6 +23,8 @@ class App extends BaseConfig
 	*/
 	public $baseURL = 'http://localhost:8080/';
 
+	// public $baseURL = 'http://localhost/TspsOg/';
+
 	/*
 	|--------------------------------------------------------------------------
 	| Index File
@@ -33,7 +35,8 @@ class App extends BaseConfig
 	| variable so that it is blank.
 	|
 	*/
-	public $indexPage = 'index.php';
+	// public $indexPage = 'index.php';
+	public $indexPage = '';
 
 	/*
 	|--------------------------------------------------------------------------

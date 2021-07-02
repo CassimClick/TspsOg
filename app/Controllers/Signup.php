@@ -28,7 +28,7 @@ class Signup extends BaseController
                         'title' => 'sign up'
                 ];
 
-                if ($this->request->getMethod() === 'post') {
+                if ($this->request->getMethod() == 'post') {
 
                         $rules = [
                                 "firstname"       => "required|min_length[3]|max_length[15]",

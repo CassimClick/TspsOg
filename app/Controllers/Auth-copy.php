@@ -21,10 +21,19 @@ class Auth extends BaseController
         helper(['form', 'url', 'array', 'date', 'regions']);
     }
 
-  
+    public function login()
+    {
+
+        $data['page'] = [
+            'title' => 'Login',
+        ];
+
+        return view('Admin/loginPage');
+    }
     public function register()
     {
-      
+        $data = [];
+        $data['validation'] = null;
         $data['page'] = [
             'title' => 'Resister Account',
         ];
@@ -32,54 +41,36 @@ class Auth extends BaseController
         return view('Admin/registerPage');
     }
 
-    public function login()
+    public function logUser()
     {
-        $data = [];
-        $data['validation'] = null;
-
-        
-        $data['page'] = [
-            'title' => 'Login',
-        ];
         if ($this->request->getMethod() == 'post') {
-            $rules = [
 
-                "email" => "required|valid_email",
-                "password" => "required|min_length[6]|max_length[20]",
-            ];
-            if ($this->validate($rules)) {
+            $email = $this->request->getVar('email', FILTER_SANITIZE_STRING);
+            $password = $this->request->getVar('password', FILTER_SANITIZE_STRING);
 
-                $email = $this->request->getVar('email', FILTER_SANITIZE_STRING);
-                $password = $this->request->getVar('password', FILTER_SANITIZE_STRING);
+            $userData = $this->loginModel->verifyEmail($email);
 
-                $userData = $this->loginModel->verifyEmail($email);
+            if ($userData) {
 
-                if ($userData) {
-                    if (password_verify($password, $userData->password)) {
-                        $this->session->set('loggedUser',$userData->unique_id);
-                        return redirect()->route('dashBoard');
-                      
-                    } else {
-                        $this->session->setFlashdata('error', 'Wrong password entered for the email');
-                        return redirect()->to('login');
-                    }
+                print_r($userData);
+                if (password_verify($password, $userData->password)) {
+                    echo 'logged in';
                 } else {
-                    $this->session->setFlashdata('error', 'Sorry email does not exist');
+                    $this->session->setFlashdata('error', 'Wrong password');
                     return redirect()->to('login');
                 }
             } else {
-                $data['validation'] = $this->validator;
+                $this->session->setFlashdata('error', 'Sorry email does not exist');
+                return redirect()->to('login');
             }
         }
-        return view('Admin/loginPage',$data);
 
-        //TODO:fix the sign up page
     }
     public function registerUser()
     {
 
         if ($this->request->getMethod() == 'post') {
-        
+            // print_r($_POST);
 
             $uniqueId = md5(str_shuffle('abcdefghijklmnopqrstuvwxyz' . time()));
             $userData = [
@@ -103,15 +94,6 @@ class Auth extends BaseController
 
         }
 
-    }
-
-    
-    public function logout()
-    {
-            $this->session->remove('loggedUser');
-            $this->session->remove('role');
-            $this->session->destroy();
-            return redirect()->to(\base_url().'/login');
     }
 
 }

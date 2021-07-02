@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Query string...
+# Redirect URLs of the form "/index.php?/my-seo-friendly-uri"
+# And "/?/my-seo-friendly-uri"
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteCond %{QUERY_STRING} ^(/.*)
+RewriteRule ^(index\.php)?$ %1 [QSD,R=302,L]
+
+# Path-Info...
+# Redirect URLs of the form "/index.php/my-seo-friendly-uri"
+# Also handles "/index.php" only
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^index.php(?:/(.*))?$ /$1 [R=302,L]
+
+# CodeIgniter Front-controller
+# (NB: Using query string method to pass the URL)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) index.php?/$1 [L]
