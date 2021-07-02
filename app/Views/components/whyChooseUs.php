@@ -68,13 +68,13 @@
                                         <a href="#"
                                             class="icon bg-theme-colored pull-left sm-pull-none flip mr-10 border-radius-5px">
                                             <i class="fal fa-medkit 2x"></i>
-                                            
+
 
                                         </a>
                                         <div class="icon-box-details ml-sm-0">
 
                                             <h4 class="icon-box-title mt-15  letter-space-1 font-weight-600 mt-5">
-                                               On Campus Medical Facility</h4>
+                                                On Campus Medical Facility</h4>
                                             <!-- <p class="text-gray">Lorem ipsum dolor sit amet, consectetur.</p> -->
                                         </div>
                                     </div>
@@ -83,14 +83,14 @@
                                     <div class="icon-box p-0 mb-40">
                                         <a href="#"
                                             class="icon bg-theme-colored pull-left sm-pull-none flip mr-10 border-radius-5px">
-                                            <i class="fal fa-church 2x"></i>
-                                            
+                                            <i class="fal fa-praying-hands 2x"></i>
+
 
                                         </a>
                                         <div class="icon-box-details ml-sm-0">
 
                                             <h4 class="icon-box-title mt-15  letter-space-1 font-weight-600 mt-5">
-                                               Freedom Of Worship</h4>
+                                                Freedom Of Worship</h4>
                                             <!-- <p class="text-gray">Lorem ipsum dolor sit amet, consectetur.</p> -->
                                         </div>
                                     </div>

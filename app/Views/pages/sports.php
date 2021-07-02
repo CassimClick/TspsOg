@@ -115,13 +115,13 @@
             </div>
 
             <div class="col-md-4  wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.5s">
-                <img class="aboutImage" src="images/sports/team7.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/footBall.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage" src="images/sports/team6.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/basket.jpg" alt="">
             </div>
             <div class="col-md-4">
-                <img class="aboutImage" src="images/sports/team4.jpg" alt="">
+                <img class="aboutImage " src="<?=base_url()?>/assets/images/sps/vollayBall1.jpg" alt="">
             </div>
 
         </div>

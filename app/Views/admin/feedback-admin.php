@@ -14,7 +14,7 @@
 
     <div class="card">
         <div class="card-header">
-            <?=ucfirst($feedback->name) ?> (<span
+            <?=($feedback->name != '') ? ucfirst($feedback->name) :'Anonymous' ?> (<span
                 style="font-size: 12px;"><?= dateFormatter($feedback->created_at) ?></span>)
         </div>
         <div class="card-body">

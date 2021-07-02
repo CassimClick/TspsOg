@@ -22,21 +22,14 @@
             <div class="col-md-6">
                 <div class=" wrapper gallery-isotope grid-2 gutter-small clearfix" data-lightbox="gallery">
                     <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="assets/images/sps/pre.jpg" data-lightbox="gallery-item" title="Students"><img
-                                src="assets/images/sps/pre.jpg" alt=""></a>
+                        <a href="assets/images/sps/preSchoolStudents.jpg" data-lightbox="gallery-item"
+                            title="Students"><img src="assets/images/sps/preSchoolStudents.jpg" alt=""></a>
                     </div>
                     <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
                         <a href="assets/images/sps/pre.jpg" data-lightbox="gallery-item" title="Students"><img
                                 src="assets/images/sps/pre.jpg" alt=""></a>
                     </div>
-                    <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="assets/images/sps/pre.jpg" data-lightbox="gallery-item" title="Students"><img
-                                src="assets/images/sps/pre.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="assets/images/sps/pre.jpg" data-lightbox="gallery-item" title="Students"><img
-                                src="assets/images/sps/pre.jpg" alt=""></a>
-                    </div>
+
                     <!-- <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
                         <a href="assets/images/sps/pre.jpg" data-lightbox="gallery-item" title="Students"><img
                                 src="assets/images/sps/pre.jpg" alt=""></a>

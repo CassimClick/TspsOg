@@ -35,13 +35,13 @@
                 </p>
             </div>
             <div class="col-md-6">
-                <img class="aboutImage" src="assets/images/sps/pre.jpg" alt="">
+                <img class="aboutImage" src="assets/images/sps/frontBlocks.jpg" alt="">
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-md-6">
-                <img class="aboutImage" src="assets/images/sps/pre.jpg" alt="">
+                <img class="aboutImage" src="assets/images/sps/middleBlock.jpg" alt="">
             </div>
 
             <div class="col-md-6">

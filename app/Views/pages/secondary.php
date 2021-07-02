@@ -27,23 +27,15 @@
                             title="Students"><img src="assets/images/sps/secondarySchool.jpg" alt=""></a>
                     </div>
                     <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
+                        <a href="assets/images/sps/kimbweta.jpg" data-lightbox="gallery-item" title="Students"><img
+                                src="assets/images/sps/kimbweta.jpg" alt=""></a>
+                    </div>
+                    <!-- <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
                         <a href="assets/images/sps/secondarySchool.jpg" data-lightbox="gallery-item"
                             title="Students"><img src="assets/images/sps/secondarySchool.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="assets/images/sps/secondarySchool.jpg" data-lightbox="gallery-item"
-                            title="Students"><img src="assets/images/sps/secondarySchool.jpg" alt=""></a>
-                    </div>
-                    <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="assets/images/sps/secondarySchool" data-lightbox="gallery-item" title="Students"><img
-                                src="assets/images/sps/secondarySchool" alt=""></a>
-                    </div>
-                    <div class="gallery-item" style="position: absolute; left: 0px; top: 209px;">
-                        <a href="https://images.pexels.com/photos/110812/pexels-photo-110812.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                            data-lightbox="gallery-item" title="Students"><img
-                                src="https://images.pexels.com/photos/110812/pexels-photo-110812.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                alt=""></a>
-                    </div>
+                    </div> -->
+
+
 
                 </div>
             </div>

@@ -35,7 +35,7 @@
                                     </li>
 
                                 </ul>
-                                <p class="mb-15 mt-15 text-white"><?=$event->description?></p>
+                                <p class="mb-15 mt-15 text-white"><?=substr($event->description,0,80)?>.....</p>
                                 <a class="text-white font-weight-600"
                                     href="<?=base_url()?>/singleEvent/<?=$event->id?>">Read More →</a>
                             </div>

@@ -44,6 +44,9 @@ class Admin extends BaseController
     }
     public function announcements()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Announcements',
             'heading' => 'Announcements',
@@ -56,6 +59,9 @@ class Admin extends BaseController
 //=================Publishing new Announcement====================
     public function publishAnnouncement()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
 
             $announcement = [
@@ -78,6 +84,9 @@ class Admin extends BaseController
     //=================Update existing announcement====================
     public function updateAnnouncement()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $theId = $this->request->getVar('theId');
             $announcement = [
@@ -100,6 +109,9 @@ class Admin extends BaseController
 
     public function viewSingleAnnouncement()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $announcementId = $this->request->getVar('id');
             $result = $this->announcementModel->singleAnnouncement($announcementId);
@@ -110,6 +122,9 @@ class Admin extends BaseController
     }
     public function deleteAnnouncement()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $announcementId = $this->request->getVar('id');
             $result = $this->announcementModel->deleteAnnouncement($announcementId);
@@ -121,6 +136,9 @@ class Admin extends BaseController
 
     public function events()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Events',
             'heading' => 'Events',
@@ -131,6 +149,9 @@ class Admin extends BaseController
 
     public function joining()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Joining Instruction',
         ];
@@ -178,6 +199,9 @@ class Admin extends BaseController
 
     public function deleteJoiningInstruction()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->joiningInstruction->deleteJoining($fileId);
@@ -195,6 +219,9 @@ class Admin extends BaseController
 
     public function sendFeedback()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $data = [
                 'name' => $this->request->getVar('name'),
@@ -212,6 +239,9 @@ class Admin extends BaseController
 
     public function viewFeedback()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Feedback',
 
@@ -223,6 +253,9 @@ class Admin extends BaseController
 
     public function deleteFeedback()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $feedbackId = $this->request->getVar('id');
             $request = $this->feedbackModel->deleteFeedback($feedbackId);
@@ -239,6 +272,9 @@ class Admin extends BaseController
 
     public function fileUpload()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Files Upload',
         ];
@@ -284,6 +320,9 @@ class Admin extends BaseController
 
     public function deleteUploadedFile()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->Downloads->deleteFile($fileId);
@@ -303,6 +342,9 @@ class Admin extends BaseController
 
     public function publishResult()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         $data['page'] = [
             'title' => 'Academic Results',
         ];
@@ -350,6 +392,9 @@ class Admin extends BaseController
 
     public function deleteResult()
     {
+        if(!$this->session->has('loggedUser')){
+            return redirect()->route('login');
+               }
         if ($this->request->getMethod() == 'post') {
             $fileId = $this->request->getVar('id');
             $result = $this->results->deleteResult($fileId);
@@ -364,5 +409,7 @@ class Admin extends BaseController
         }
 
     }
+
+    
 
 }
